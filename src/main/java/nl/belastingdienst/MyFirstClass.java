@@ -1,6 +1,8 @@
 package nl.belastingdienst;
+import nl.belastingdienst.h4.elevenproof.ElevenProof;
+import nl.belastingdienst.h4.elevenproof.extraHoursglass.HourMain;
+import nl.belastingdienst.h5.Method;
 
-import javax.lang.model.type.PrimitiveType;
 import java.util.Scanner;
 
 public class MyFirstClass {
@@ -95,7 +97,7 @@ public class MyFirstClass {
         1. With static typing, it is not possible to redefine a variable type. with dynamic that is possible.
         2. Prevent accidental type changes
         2. primitive types are stored in the stack, and reference types are stored in the heap
-        3. You get an Error that is cause by the "string" wich is not written with an capitol S. so string is this instance wont be a variable type.
+        3. You get an Error that is cause by the "string" which is not written with an capitol S. so string is this instance wont be a variable type.
         4. Command box: 12. it will make a new string combining the 1 and a 2. making 12
         5. Error: you can't use short and long as variable names because they ar variable types themself.
          */
@@ -108,6 +110,12 @@ public class MyFirstClass {
         //trainee();
 
         //10. Remove objects from memory when they aren't being used to free up memory space when needed
+        //H7.start();
+        //Bank.bankDemo();
+        //ElevenProof.start();
+        //HourMain.createHourglass();
+        Method.start();
+
 
 
     }
