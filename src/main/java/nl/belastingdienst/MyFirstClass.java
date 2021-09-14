@@ -1,6 +1,7 @@
 package nl.belastingdienst;
 import nl.belastingdienst.h4.elevenproof.ElevenProof;
 import nl.belastingdienst.h4.elevenproof.extraHoursglass.HourMain;
+import nl.belastingdienst.h5.Fibo;
 import nl.belastingdienst.h5.Method;
 
 import java.util.Scanner;
@@ -114,7 +115,8 @@ public class MyFirstClass {
         //Bank.bankDemo();
         //ElevenProof.start();
         //HourMain.createHourglass();
-        Method.start();
+        //Method.start();
+        Fibo.start();
 
 
 
