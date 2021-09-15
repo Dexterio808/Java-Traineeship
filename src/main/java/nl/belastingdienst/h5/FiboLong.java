@@ -7,7 +7,23 @@ public class FiboLong {
         System.out.println("47:");
         goldenRatio(47);
 
+//        System.out.println(goldenRatio(92));
+//        System.out.println(goldenRatio(93));
 
+    }
+
+    private static void checkMax() {
+        boolean gold = true;
+        int i = 46;
+        while (gold){
+            double check = goldenRatio(i);
+            if (check < 1.6 || check > 1.7) {
+                gold = false;
+                System.out.println(i);
+            } else {
+                i++;
+            }
+        }
     }
 
     public static long run(int n) {
@@ -15,7 +31,7 @@ public class FiboLong {
         long b = 0;
         long c = 1;
         System.out.print(a + " ");
-        for (int i = 0; i < n; i++){
+        for (int i = 0; i < n -1; i++){
             System.out.print(c + " ");
             b = a;
             a = c;
@@ -56,8 +72,8 @@ public class FiboLong {
         return base;
     }
 
-    public static void goldenRatio(int n){
-        double gr = (double)run(n) / run(n-1);
-        System.out.println(gr);
+    public static double goldenRatio(int n){
+        return (double)run(n) / run(n-1);
+
     }
 }

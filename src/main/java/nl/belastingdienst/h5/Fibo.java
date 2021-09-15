@@ -2,8 +2,15 @@ package nl.belastingdienst.h5;
 
 public class Fibo {
     public static void start(){
-        goldenRatio(46);
-        goldenRatio(47);
+
+//        goldenRatio(10);
+//        goldenRatio(46);
+//        goldenRatio(47);
+//        goldenRatio(48);
+//        goldenRatio(49);
+        for (int i = 46; i < 56; i++) {
+            goldenRatio(i);
+        }
 
 
     }
@@ -13,7 +20,7 @@ public class Fibo {
         int b = 0;
         int c = 1;
         System.out.print(a + " ");
-        for (int i = 0; i < n; i++){
+        for (int i = 0; i < n -1; i++){
             System.out.print(c + " ");
             b = a;
             a = c;

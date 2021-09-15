@@ -45,12 +45,8 @@ public class Person {
         return universalRights;
     }
 
-    public  void haveBirthday()  {
-        try{
-            checkDeath(getAge());
-        } catch(PersonDiedException e) {
-            System.out.println("Person has died");
-        }
+    public void haveBirthday() throws PersonDiedException {
+        checkDeath(getAge());
     }
 
     public void checkDeath(int age) throws PersonDiedException {
