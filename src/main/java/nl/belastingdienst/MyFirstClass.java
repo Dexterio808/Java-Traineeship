@@ -2,6 +2,7 @@ package nl.belastingdienst;
 import nl.belastingdienst.h4.elevenproof.ElevenProof;
 import nl.belastingdienst.h4.elevenproof.extraHoursglass.HourMain;
 import nl.belastingdienst.h5.Fibo;
+import nl.belastingdienst.h5.FiboLong;
 import nl.belastingdienst.h5.Method;
 
 import java.util.Scanner;
@@ -116,7 +117,7 @@ public class MyFirstClass {
         //ElevenProof.start();
         //HourMain.createHourglass();
         //Method.start();
-        Fibo.start();
+        FiboLong.start();
 
 
 

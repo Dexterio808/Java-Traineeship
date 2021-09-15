@@ -3,47 +3,53 @@ package nl.belastingdienst.h4.elevenproof.extraHoursglass;
 import java.util.Scanner;
 
 public class HourLogic {
-    private static Scanner scanner = new Scanner(System.in);
-    public static int attempt = 0;
+    private static final Scanner scanner = new Scanner(System.in);
 
-
-    public  static int InputNumber() {
+    public static int inputNumber() {
         System.out.println("Enter your uneven number:");
-        int a = scanner.nextInt();
-        return a;
+        return scanner.nextInt();
     }
 
     public static int validInput() throws EvenNumberException {
-        int input = InputNumber();
+        int input = inputNumber();
         if (input % 2 != 0) {
             return input;
-            } else {
-                throw new EvenNumberException();
-            }
+        } else {
+            throw new EvenNumberException("Number " + input + " must be odd.");
+        }
     }
 
 
-
-
-
-
-    public static void buildHourglass(int input){
-        int middle = (input+1)/2;
-        for (int i = 0; i< input; i++){             //size hourglass
-            if ( i == 0 || i == input - 1){         //if first or last row
-                for (int j = 0; j< input; j++){     //prints "*" 9 times
-                    System.out.print("*");
-                }
+    public static void buildHourglass(int input) {
+        for (int row = 0; row < input; row++) {
+            if (isFirstRow(row) || isLastRow(input, row)) {
+                System.out.print("*".repeat(input));
             } else {
-                    for (int k = 0; k < input; k++) {
-                        if (k == i || k == (input - (i +1))){
-                            System.out.print("*");
-                        } else {
-                            System.out.print(" ");
-                        }
+                for (int pos = 0; pos < input; pos++) {
+                    if (isStarPositionLeft(row, pos) || isStarPositionRight(input, row, pos)) {
+                        System.out.print("*");
+                    } else {
+                        System.out.print(" ");
                     }
+                }
             }
             System.out.println();
         }
+    }
+
+    private static boolean isStarPositionRight(int input, int i, int k) {
+        return k == (input - (i + 1));
+    }
+
+    private static boolean isStarPositionLeft(int i, int k) {
+        return k == i;
+    }
+
+    private static boolean isLastRow(int input, int i) {
+        return i == input - 1;
+    }
+
+    private static boolean isFirstRow(int i) {
+        return i == 0;
     }
 }
