@@ -2,17 +2,18 @@ package nl.belastingdienst.h5;
 
 public class FiboLong {
     public static void start(){
-        System.out.println("46");
-        goldenRatio(46);
-        System.out.println("47:");
-        goldenRatio(47);
+//        System.out.println("46");
+//        goldenRatio(46);
+//        System.out.println("47:");
+//        goldenRatio(47);
 
 //        System.out.println(goldenRatio(92));
 //        System.out.println(goldenRatio(93));
+        System.out.println();
 
     }
 
-    private static void checkMax() {
+  /*  private static void checkMax() {
         boolean gold = true;
         int i = 46;
         while (gold){
@@ -24,21 +25,24 @@ public class FiboLong {
                 i++;
             }
         }
-    }
+    }*/
 
-    public static long run(int n) {
+    public static long[] run(int n) {
+        long[] fibo = new long[n];
         long a = 1;
         long b = 0;
         long c = 1;
         System.out.print(a + " ");
+        fibo[0] = n;
         for (int i = 0; i < n -1; i++){
             System.out.print(c + " ");
+            fibo[i+1] = c;
             b = a;
             a = c;
             c = a + b;
         }
         System.out.println();
-        return a;
+        return fibo;
     }
 
     public static long run(int start, int n ){
@@ -72,8 +76,8 @@ public class FiboLong {
         return base;
     }
 
-    public static double goldenRatio(int n){
-        return (double)run(n) / run(n-1);
-
-    }
+//    public static double goldenRatio(int n){
+//        return (double)run(n) / run(n-1);
+//
+//    }
 }

@@ -1,11 +1,8 @@
 package nl.belastingdienst;
+import nl.belastingdienst.h1.Trainee;
+import nl.belastingdienst.h1.Weekday;
 import nl.belastingdienst.h4.elevenproof.ElevenProof;
-import nl.belastingdienst.h4.elevenproof.extraHoursglass.HourMain;
-import nl.belastingdienst.h5.Fibo;
-import nl.belastingdienst.h5.FiboLong;
-import nl.belastingdienst.h5.Method;
-import nl.belastingdienst.h7.Bank.Bank;
-import nl.belastingdienst.tafels.Tafels;
+import nl.belastingdienst.h6.array.H6Assignment;
 
 import java.util.Scanner;
 
@@ -116,12 +113,16 @@ public class MyFirstClass {
         //10. Remove objects from memory when they aren't being used to free up memory space when needed
         //H7.start();
         //Bank.bankDemo();
-        //ElevenProof.start();
+        //ElevenProof elevenProof = new ElevenProof();
+        //elevenProof.start();
         //HourMain.createHourglass();
         //Method.start();
         //Fibo.start();
         //FiboLong.start();
         //Tafels.start();
+        H6Assignment h6 = new H6Assignment();
+        h6.start();
+
 
 
 

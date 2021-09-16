@@ -1,9 +1,8 @@
 package nl.belastingdienst.h7;
 
-import org.junit.Assert;
+import nl.belastingdienst.h7.assignment.Person;
+import nl.belastingdienst.h7.assignment.PersonDiedException;
 import org.junit.Test;
-
-import java.util.function.Function;
 
 import static org.junit.Assert.assertEquals;
 

@@ -1,4 +1,4 @@
-package nl.belastingdienst.h4.elevenproof.extraHoursglass;
+package nl.belastingdienst.h4.extraHoursglass;
 
 import java.util.Scanner;
 

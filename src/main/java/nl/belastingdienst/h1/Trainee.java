@@ -1,4 +1,4 @@
-package nl.belastingdienst;
+package nl.belastingdienst.h1;
 
 public class Trainee {
     private String firstName;

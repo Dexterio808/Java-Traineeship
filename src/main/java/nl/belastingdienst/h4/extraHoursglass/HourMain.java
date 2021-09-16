@@ -1,8 +1,4 @@
-package nl.belastingdienst.h4.elevenproof.extraHoursglass;
-
-import nl.belastingdienst.h4.elevenproof.InvalidNumberException;
-
-import java.util.Scanner;
+package nl.belastingdienst.h4.extraHoursglass;
 
 public class HourMain {
     private static int attempts = 0;

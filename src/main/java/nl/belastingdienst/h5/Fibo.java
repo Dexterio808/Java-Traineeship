@@ -11,8 +11,6 @@ public class Fibo {
         for (int i = 46; i < 56; i++) {
             goldenRatio(i);
         }
-
-
     }
 
     public static int run(int n) {

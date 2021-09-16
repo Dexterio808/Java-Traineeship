@@ -11,15 +11,11 @@ public class Main {
         b.addAccount(acc1);
         b.addAccount(acc2);
 
-        try {
-            b.transferMoney(acc1, acc2, 300);
-            b.transferMoney(acc2, acc2, 300);
+        b.transferMoney(acc1, acc2, 300);
+        b.transferMoney(acc2, acc2, 300);
 
-            b.interestTime();
-            b.bankGold();
+        b.interestTime();
+        b.bankGold();
 
-        } catch(NotEnoughGoldException e) {
-            e.printStackTrace();
-        }
     }
 }

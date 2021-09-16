@@ -17,12 +17,13 @@ public class Bank {
         System.out.println("New balance: " + account1.getAccountNumber() + " : " + account1.getBalance());
     }
 
-    public void bankGold() {
+    public double bankGold() {
         double bankBalance = 0;
         for (Account account : accounts) {
             bankBalance += account.getBalance();
         }
         System.out.println("Total bank balance is: " + bankBalance);
+        return bankBalance;
     }
 
     public void interestTime() {
