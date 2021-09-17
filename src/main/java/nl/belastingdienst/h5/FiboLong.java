@@ -1,5 +1,7 @@
 package nl.belastingdienst.h5;
 
+import java.util.Arrays;
+
 public class FiboLong {
     public static void start(){
 //        System.out.println("46");
@@ -9,7 +11,7 @@ public class FiboLong {
 
 //        System.out.println(goldenRatio(92));
 //        System.out.println(goldenRatio(93));
-        System.out.println();
+        System.out.println(Arrays.toString(run(5)));
 
     }
 
@@ -33,7 +35,7 @@ public class FiboLong {
         long b = 0;
         long c = 1;
         System.out.print(a + " ");
-        fibo[0] = n;
+        fibo[0] = a;
         for (int i = 0; i < n -1; i++){
             System.out.print(c + " ");
             fibo[i+1] = c;

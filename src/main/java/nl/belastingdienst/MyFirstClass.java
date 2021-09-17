@@ -2,6 +2,7 @@ package nl.belastingdienst;
 import nl.belastingdienst.h1.Trainee;
 import nl.belastingdienst.h1.Weekday;
 import nl.belastingdienst.h4.elevenproof.ElevenProof;
+import nl.belastingdienst.h5.FiboLong;
 import nl.belastingdienst.h6.array.H6Assignment;
 
 import java.util.Scanner;
@@ -118,8 +119,9 @@ public class MyFirstClass {
         //HourMain.createHourglass();
         //Method.start();
         //Fibo.start();
-        //FiboLong.start();
-        //Tafels.start();
+//        FiboLong fiboLong = new FiboLong();
+//        FiboLong.start();
+//        Tafels.start();
         H6Assignment h6 = new H6Assignment();
         h6.start();
 
