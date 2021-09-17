@@ -4,7 +4,21 @@ package nl.belastingdienst.h7.Bank;
 import java.util.ArrayList;
 
 public class Bank {
+
+    private String bankName;
+    private String bankAccountNumber;
+
     private ArrayList<Account> accounts = new ArrayList<>();
+
+    public Bank(String bankName) {
+        this(bankName, null, null);
+    }
+
+    public Bank(String bankName, String bankAccountNumber, ArrayList<Account> accounts) {
+        this.bankName = bankName;
+        this.bankAccountNumber = bankAccountNumber;
+        this.accounts = accounts;
+    }
 
     public void addAccount(Account account) {
         accounts.add(account);
@@ -48,4 +62,11 @@ public class Bank {
         }
     }
 
+    @Override
+    public String toString() {
+        return "Bank{" +
+                "bankName='" + bankName + '\'' +
+                ", bankAccountNumber='" + bankAccountNumber + '\'' +
+                '}';
+    }
 }

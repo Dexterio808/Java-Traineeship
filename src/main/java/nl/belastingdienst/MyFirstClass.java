@@ -4,6 +4,7 @@ import nl.belastingdienst.h1.Weekday;
 import nl.belastingdienst.h4.elevenproof.ElevenProof;
 import nl.belastingdienst.h5.FiboLong;
 import nl.belastingdienst.h6.array.H6Assignment;
+import nl.belastingdienst.micro.App;
 
 import java.util.Scanner;
 
@@ -122,8 +123,10 @@ public class MyFirstClass {
 //        FiboLong fiboLong = new FiboLong();
 //        FiboLong.start();
 //        Tafels.start();
-        H6Assignment h6 = new H6Assignment();
-        h6.start();
+//        H6Assignment h6 = new H6Assignment();
+//        h6.start();
+        App micro = new App();
+        micro.startApp();
 
 
 

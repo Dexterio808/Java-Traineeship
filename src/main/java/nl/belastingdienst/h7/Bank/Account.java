@@ -8,7 +8,11 @@ public class Account {
     private double balance;
     private double interestRate;
 
-    public Account(String accountNumber, int balance, double interestRate) {
+    public Account(String accountNumber) {
+        this(accountNumber, 0d, 0d);
+    }
+
+    public Account(String accountNumber, double balance, double interestRate) {
         this.accountNumber = accountNumber;
         this.balance = balance;
         this.interestRate = interestRate;
@@ -30,7 +34,7 @@ public class Account {
         return interestRate;
     }
 
-    void withdraw(double amount) throws NotEnoughGoldException{
+    void withdraw(double amount) throws NotEnoughGoldException {
         if (amount <= this.getBalance()) {
             this.setBalance(this.getBalance() - amount);
         } else {
@@ -43,10 +47,10 @@ public class Account {
         this.setBalance(this.getBalance() + amount);
     }
 
-    void returnInterest(){
+    void returnInterest() {
         System.out.println("Account number: " + getAccountNumber());
         System.out.println("Balance before interest:" + getBalance());
-        double interest = (getBalance()* (getInterestRate()/100));
+        double interest = (getBalance() * (getInterestRate() / 100));
         setBalance(getBalance() + interest);
         System.out.println("Balance after interest:" + getBalance());
     }

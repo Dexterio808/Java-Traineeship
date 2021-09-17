@@ -1,8 +1,9 @@
 package nl.belastingdienst.h7.assignment;
 
+import java.io.IOException;
 import java.util.Objects;
 
-public class Person {
+public class Person extends Human {
     private String name;
     private int age;
     private Gender gender;
@@ -13,6 +14,10 @@ public class Person {
         this.name = name;
         this.age = age;
         this.gender = gender;
+    }
+
+    public Person(){
+        this("Anonymous", 0);
     }
 
     public Person(String name, int age) {
@@ -57,6 +62,11 @@ public class Person {
         } else {
             throw new PersonDiedException();
         }
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println("Finalize!");
     }
 
     @Override

@@ -28,6 +28,18 @@ public class PersonTest {
         z.haveBirthday();
     }
 
+    @Test
+    public void testSystemGC() throws InterruptedException {
+        Person testPerson = new Person();
+        System.out.println("cp1");
+        testPerson = null;
+        Thread.sleep(1_000);
+        System.out.println("cp2");
+        System.gc();
+        Thread.sleep(1_000);
+        System.out.println("cp3");
+        Thread.sleep(1_000);
+    }
 
 
 }
