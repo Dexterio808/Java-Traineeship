@@ -68,6 +68,7 @@ public class App {
 
     private void displayCustomers() {
         System.out.printf("\n%-10s %-10s %-10s %-10s\n", "CardID", "Name", "Credit", "Discount");
+
         for (Card card : cards) {
             System.out.printf("%-10s %-10s %-10s %-10s\n"
                     , card.getCardId()

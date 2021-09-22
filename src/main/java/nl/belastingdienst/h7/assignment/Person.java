@@ -13,13 +13,7 @@ public class Person extends Human {
 
     private ArrayList<HistoryRecord> historyRecords = new ArrayList<>();
 
-    public Person(String name, int age, Gender gender) {
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
-    }
-
-    public Person(){
+    public Person() {
         this("Anonymous", 0);
     }
 
@@ -27,6 +21,12 @@ public class Person extends Human {
         this(name, age, Gender.UNKNOWN);
     }
 
+    public Person(String name, int age, Gender gender) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+    }
+    
     public String getName() {
         return name;
     }

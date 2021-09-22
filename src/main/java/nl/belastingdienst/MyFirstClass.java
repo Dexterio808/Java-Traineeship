@@ -1,16 +1,18 @@
 package nl.belastingdienst;
+
 import nl.belastingdienst.h1.Trainee;
 import nl.belastingdienst.h1.Weekday;
 import nl.belastingdienst.h4.elevenproof.ElevenProof;
 import nl.belastingdienst.h5.FiboLong;
 import nl.belastingdienst.h6.array.H6Assignment;
+import nl.belastingdienst.lambda.LambdaStuff;
 import nl.belastingdienst.micro.App;
 
 import java.util.Scanner;
 
 public class MyFirstClass {
 
-    public static void plusPlus(){
+    public static void plusPlus() {
         int a = 1;
         int b = 1;
 
@@ -20,7 +22,7 @@ public class MyFirstClass {
         System.out.println(b);
     }
 
-    public static void resultJ(){
+    public static void resultJ() {
         int i = 3;
         int j = i < 3 ? i++ + ++i : ++i >>> 1;
         System.out.println(j);
@@ -29,13 +31,13 @@ public class MyFirstClass {
         // 4 >>> 1 = 0100 -> 0010 = 2
     }
 
-    public static void binarySum(){
+    public static void binarySum() {
         byte a = 0b1010;
         byte b = 0b0100;
-        System.out.println( a + b);
+        System.out.println(a + b);
     }
 
-    public static void time(){
+    public static void time() {
         int a = 23; //current time
         int b = 80; //time to pass
 
@@ -45,14 +47,14 @@ public class MyFirstClass {
         System.out.println(d);
     }
 
-    public static void primitiveSizes(){
+    public static void primitiveSizes() {
         System.out.println(" Byte = " + Byte.MIN_VALUE + " " + Byte.MAX_VALUE);
         System.out.println(" Int = " + Integer.MIN_VALUE + " " + Integer.MAX_VALUE);
         System.out.println(" Long = " + Long.MIN_VALUE + " " + Long.MAX_VALUE);
         System.out.println(" Short = " + Short.MIN_VALUE + " " + Short.MAX_VALUE);
         System.out.println(" Float =" + Float.MIN_VALUE + " " + Float.MAX_VALUE);
         System.out.println(" Double = " + Double.MIN_VALUE + " " + Double.MAX_VALUE);
-        System.out.println(" Char = " + (int)Character.MIN_VALUE + " " + (int)Character.MAX_VALUE);
+        System.out.println(" Char = " + (int) Character.MIN_VALUE + " " + (int) Character.MAX_VALUE);
     }
 
     public static void intOverflow() {
@@ -65,27 +67,26 @@ public class MyFirstClass {
         System.out.println(b);
     }
 
-    public static void weekday(){
+    public static void weekday() {
         Weekday day1 = Weekday.THURSDAY;
         System.out.println(day1);
     }
 
-    public static void trainee(){
+    public static void trainee() {
         Trainee pepijn = new Trainee("Pepijn", "Tournoij");
         pepijn.printFullName();
     }
 
-    public static void  elevenProof(){
+    public static void elevenProof() {
         Scanner input = new Scanner(System.in);
         System.out.println("Input account number:");
         int accountNumber = input.nextInt();
 
 
-        for (int i = 0; i < 10; i++){
+        for (int i = 0; i < 10; i++) {
 
         }
     }
-
 
 
     public static void main(String[] args) {
@@ -123,13 +124,12 @@ public class MyFirstClass {
 //        FiboLong fiboLong = new FiboLong();
 //        FiboLong.start();
 //        Tafels.start();
-        H6Assignment h6 = new H6Assignment();
-        h6.start();
+//        H6Assignment h6 = new H6Assignment();
+//        h6.start();
 //        App micro = new App();
 //        micro.startApp();
-
-
-
+        LambdaStuff lambdaStuff = new LambdaStuff();
+        lambdaStuff.start();
 
     }
 

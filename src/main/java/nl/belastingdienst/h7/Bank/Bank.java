@@ -10,6 +10,7 @@ public class Bank {
 
     private ArrayList<Account> accounts = new ArrayList<>();
 
+    //TODO change bankAccountNumber int
     public Bank(String bankName) {
         this(bankName, null, null);
     }

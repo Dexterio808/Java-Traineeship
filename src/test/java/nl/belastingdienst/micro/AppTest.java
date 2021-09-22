@@ -38,7 +38,9 @@ public class AppTest {
 
     @Test
     public void testApp(){
-        when(mockScanner.nextInt()).thenReturn(1237).thenReturn(200);
+        when(mockScanner.nextInt())
+                .thenReturn(1237)
+                .thenReturn(200);
         target.startApp();
     }
 

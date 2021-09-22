@@ -19,21 +19,21 @@ public class AndroidTest {
     public void testChargeNormal(){
         Android twoB = new Android();
         twoB.charge(25);
-        assertEquals(75 ,twoB.level);
+        assertEquals(75 ,twoB.getLevel());
     }
 
     @Test
     public void testChargeLimit(){
         Android twoB = new Android();
         twoB.charge(50);
-        assertEquals(100 ,twoB.level);
+        assertEquals(100 ,twoB.getLevel());
     }
 
     @Test
     public void testChargeOverLimit(){
         Android twoB = new Android();
         twoB.charge(51);
-        assertEquals(50 ,twoB.level);
+        assertEquals(50 ,twoB.getLevel());
     }
 
 }
