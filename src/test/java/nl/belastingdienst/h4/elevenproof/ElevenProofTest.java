@@ -24,6 +24,22 @@ public class ElevenProofTest {
     }
 
     @Test
+    public void testGenEleven() {
+        for (int i = 0; i < 1000; i++) {
+            System.out.println(target.genEleven());
+        }
+
+    }
+
+    @Test
+    public void testGenEleven2() {
+        for (int i = 0; i < 1000; i++) {
+            //Math.random()
+        }
+
+    }
+
+    @Test
     public void testFinalClass() {
         FinalClass mockClass = mock(FinalClass.class);
         when(mockClass.isFinal()).thenReturn(true);

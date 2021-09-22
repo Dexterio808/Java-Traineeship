@@ -1,12 +1,32 @@
 package nl.belastingdienst.h4.elevenproof;
 
 import java.util.Scanner;
+import java.util.StringJoiner;
 
 public class ElevenProof {
     private Scanner scanner = new Scanner(System.in);
+    static int ELEVEN = 1;
 
     public void start() {
-        run();
+        //run();
+    }
+
+    int genEleven(){
+        int[] eleven = new int[9];
+        StringBuilder elevenString = new StringBuilder();
+        int target = 11 * ELEVEN++;
+        StringBuilder srtb = new StringBuilder();
+
+        for (int i = 0; i < (9); i++) {
+            while(target >= (9 -i) && eleven[i] <9){
+                eleven[i] += 1;
+                target -= (9- i);
+
+            }
+            elevenString.append(eleven[i]);
+        }
+        return Integer.parseInt(elevenString.toString());
+
     }
 
     public boolean run() {

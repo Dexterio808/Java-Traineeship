@@ -1,6 +1,7 @@
 package nl.belastingdienst.h7.assignment;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class Person extends Human {
@@ -9,6 +10,8 @@ public class Person extends Human {
     private Gender gender;
     public static final String universalRights = "All humans are created equal";
     public static final int maxAge = 130;
+
+    private ArrayList<HistoryRecord> historyRecords = new ArrayList<>();
 
     public Person(String name, int age, Gender gender) {
         this.name = name;
@@ -64,6 +67,16 @@ public class Person extends Human {
         }
     }
 
+    public void addHistory(String descr) {
+        HistoryRecord historyRecord = new Person.HistoryRecord(descr);
+        historyRecords.add(historyRecord);
+    }
+
+    public void printHistory(){
+        System.out.println(historyRecords.toString());
+    }
+
+
     @Override
     protected void finalize() throws Throwable {
         System.out.println("Finalize!");
@@ -90,4 +103,20 @@ public class Person extends Human {
                 ", gender=" + gender +
                 '}';
     }
+
+    class HistoryRecord {
+        private String description;
+
+        public HistoryRecord(String description) {
+            this.description = description;
+        }
+
+        @Override
+        public String toString() {
+            return "HistoryRecord{" +
+                    "description='" + description + '\'' +
+                    '}';
+        }
+    }
+
 }

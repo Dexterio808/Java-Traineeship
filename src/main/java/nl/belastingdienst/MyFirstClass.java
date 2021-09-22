@@ -123,10 +123,10 @@ public class MyFirstClass {
 //        FiboLong fiboLong = new FiboLong();
 //        FiboLong.start();
 //        Tafels.start();
-//        H6Assignment h6 = new H6Assignment();
-//        h6.start();
-        App micro = new App();
-        micro.startApp();
+        H6Assignment h6 = new H6Assignment();
+        h6.start();
+//        App micro = new App();
+//        micro.startApp();
 
 
 
