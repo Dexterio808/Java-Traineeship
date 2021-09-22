@@ -32,6 +32,7 @@ public class LambdaStuff {
         //saySomething.run(); doesn't compile. saySomething out of scope
     }
 
+    //Create lambda interface with innerClass
     public interface MyInnerLambda{
         void run();
     }
