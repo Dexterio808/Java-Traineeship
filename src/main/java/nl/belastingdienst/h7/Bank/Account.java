@@ -1,13 +1,12 @@
 package nl.belastingdienst.h7.Bank;
 
-import java.util.ArrayList;
-
 public class Account {
 
     private String accountNumber;
     private double balance;
     private double interestRate;
 
+    // unused
     public Account(String accountNumber) {
         this(accountNumber, 0d, 0d);
     }
@@ -18,6 +17,7 @@ public class Account {
         this.interestRate = interestRate;
     }
 
+    // getters/setters zetten we meestal onderaan in de class.
     public String getAccountNumber() {
         return accountNumber;
     }
@@ -34,9 +34,10 @@ public class Account {
         return interestRate;
     }
 
+    // package private?
     void withdraw(double amount) throws NotEnoughGoldException {
         if (amount <= this.getBalance()) {
-            this.setBalance(this.getBalance() - amount);
+            this.setBalance(this.getBalance() - amount); // methods hoef je niet te prefixen met this.
         } else {
             double goldShort = amount - this.getBalance();
             throw new NotEnoughGoldException(goldShort);
@@ -47,7 +48,7 @@ public class Account {
         this.setBalance(this.getBalance() + amount);
     }
 
-    void returnInterest() {
+    void returnInterest() { // returnt niets, maar heet wel zo; kan verwarrend zijn
         System.out.println("Account number: " + getAccountNumber());
         System.out.println("Balance before interest:" + getBalance());
         double interest = (getBalance() * (getInterestRate() / 100));

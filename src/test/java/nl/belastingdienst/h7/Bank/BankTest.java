@@ -5,8 +5,9 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 
-import static org.junit.Assert.*;
-import static org.mockito.Mockito.*;
+import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 public class BankTest {
     private Bank target;
@@ -16,9 +17,12 @@ public class BankTest {
         target = new Bank("test bank");
     }
 
-
     @Test
     public void bankGold() {
+        // DRY: aangezien je onderstaande testdata ook in de andere testmethode
+        // gebruikt, kun je er ook fields van maken en resetten in de setup.
+
+        // Verder netjes!
         Account account1 = mock(Account.class);
         Account account2 = mock(Account.class);
         Account account3 = mock(Account.class);
@@ -59,11 +63,10 @@ public class BankTest {
 
             //assertEquals( 157.5d ,account1.getBalance());
 
-
+            // niet af?
 
         }
 
     }
-
 
 }
