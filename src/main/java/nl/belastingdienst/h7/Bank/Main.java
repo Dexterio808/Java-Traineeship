@@ -2,6 +2,7 @@ package nl.belastingdienst.h7.Bank;
 
 public class Main {
 
+    // deze main is niet op te starten. weet jij waarom?
     public static void main(){
         Bank b = new Bank("test bank");
         Account acc1 = new Account("100", 500, 1.25);

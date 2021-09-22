@@ -1,17 +1,18 @@
 package nl.belastingdienst.h7.Bank;
 
-
 import java.util.ArrayList;
 
 public class Bank {
 
+    // netjes
+
     private String bankName;
     private String bankAccountNumber;
 
-    private ArrayList<Account> accounts = new ArrayList<>();
+    private ArrayList<Account> accounts = new ArrayList<>(); // Variable 'accounts' initializer 'new ArrayList<>()' is redundant
 
     public Bank(String bankName) {
-        this(bankName, null, null);
+        this(bankName, null, null); // gevaarlijk: accounts blijft nu null.
     }
 
     public Bank(String bankName, String bankAccountNumber, ArrayList<Account> accounts) {
