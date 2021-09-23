@@ -52,8 +52,17 @@ public class StringCalculatorTest {
         assertThrows(IllegalArgumentException.class, () -> target.add("1,-2"));
     }
     @Test
-    public void whenANumberIslargerThen1000IgnoreNumber() {
+    public void whenANumberIsLargerThen1000IgnoreNumber() {
         assertEquals(1, target.add("1,1001"));
+    }
+
+    @Test
+    public void whenDoubleCommaReturnSum() {
+        assertEquals(3, target.add("1,,2"));
+    }
+    @Test
+    public void whenLotsOfDelimitersReturnSum() {
+        assertEquals(3, target.add("1,$&%^#&,2"));
     }
 
 
