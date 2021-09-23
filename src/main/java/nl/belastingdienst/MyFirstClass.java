@@ -1,12 +1,10 @@
 package nl.belastingdienst;
 
-import nl.belastingdienst.h1.Trainee;
-import nl.belastingdienst.h1.Weekday;
-import nl.belastingdienst.h4.elevenproof.ElevenProof;
-import nl.belastingdienst.h5.FiboLong;
-import nl.belastingdienst.h6.array.H6Assignment;
+import nl.belastingdienst.fundamentals.h1.Trainee;
+import nl.belastingdienst.fundamentals.h1.Weekday;
+import nl.belastingdienst.fundamentals.h5.FiboLong;
 import nl.belastingdienst.lambda.LambdaStuff;
-import nl.belastingdienst.micro.App;
+import nl.belastingdienst.fundamentals.micro.App;
 
 import java.util.Scanner;
 
