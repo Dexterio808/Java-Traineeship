@@ -9,31 +9,29 @@ import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
 public class BankTest {
-    //private Bank target;
+    private Bank target;
+/*
+    @Before
+    public void setUp() throws Exception {
+        target = new Bank();
+        Bank.Account account1 = target.createAccount(Bank.AccountType.CHECKING);
+        Bank.Account account2 = target.createAccount(Bank.AccountType.SAVING);
+        Bank.Account account3 = target.createAccount(Bank.AccountType.CHECKING);
+        Bank.Account account4 = target.createAccount(Bank.AccountType.SAVING);
 
-//    @Before
-//    public void setUp() throws Exception {
-//        target = new Bank("test bank");
-//        Bank.Account account1 = target.createAccount(Bank.AccountType.CHECKING);
-//        Bank.Account account2 = target.createAccount(Bank.AccountType.SAVING);
-//
-//    }
-//
-//
-//    @Test
-//    public void bankGold() {
-//        target.addAccount(account1);
-//        target.addAccount(account2);
-//        target.addAccount(account3);
-//
-//        when(account1.getBalance()).thenReturn(150d);
-//        when(account2.getBalance()).thenReturn(50d);
-//        when(account3.getBalance()).thenReturn(150_000d);
-//
-//        double bankGold = target.bankGold();
-//
-//        assertEquals(150200d, bankGold, 0.1d);
-//    }
+        target.addAccount(account1);
+        target.addAccount(account2);
+        target.addAccount(account3);
+        target.addAccount(account4);
+    }*/
+
+/*    @Test
+    public void bankBalance() {
+
+        double bankBalance = target.bankBalance();
+
+        assertEquals(150200d, bankBalance, 0.1d);
+    }*/
 //
 //    @Test
 //    public void interestTime() {

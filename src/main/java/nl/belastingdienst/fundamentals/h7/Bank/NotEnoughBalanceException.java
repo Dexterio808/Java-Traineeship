@@ -1,13 +1,13 @@
 package nl.belastingdienst.fundamentals.h7.Bank;
 
-public class NotEnoughGoldException extends Exception{
+public class NotEnoughBalanceException extends Exception{
     private double amount;
 
-    public NotEnoughGoldException(String s) {
+    public NotEnoughBalanceException(String s) {
         super(s);
     }
 
-    public  NotEnoughGoldException(double amount){
+    public NotEnoughBalanceException(double amount){
         this.amount = amount;
     }
 

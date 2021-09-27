@@ -2,6 +2,155 @@ package nl.belastingdienst.fundamentals.h7.Bank;
 
 
 import java.util.ArrayList;
+
+public class Bank {
+    private int id = 1000;
+    private ArrayList<Account> accounts;
+
+    public Bank() {
+
+    }
+
+    public enum AccountType {CHECKING, SAVING}
+
+    public Account createAccount(AccountType accountType) {
+        switch (accountType) {
+            case CHECKING:
+                return new CheckingAccount(id++);
+            case SAVING:
+                return new SavingAccount(id++);
+            default:
+                return null;
+        }
+    }
+
+    void addAccount(Account account) {
+        accounts.add(account);
+    }
+
+    double bankBalance(){
+        double bankBalance = 0;
+        for (Account account : accounts) {
+            bankBalance += account.getBalance();
+        }
+        return bankBalance;
+    }
+
+    void interestForAllBankAccounts(){
+        for (Account account : accounts) {
+            System.out.println("Account: " + account.id);
+            if (account instanceof SavingAccount){
+                SavingAccount tempSA = (SavingAccount) account;
+                System.out.println("Interest: " + tempSA.calculateInterest());
+            }
+        }
+    }
+
+    void deposit(Account account, double amount) {
+        account.deposit(amount);
+    }
+
+    boolean withdraw(Account account, double amount) throws NotEnoughBalanceException {
+        return account.withdraw(amount);
+    }
+
+    boolean transferMoney(Account account1, Account account2, double amount) throws NotEnoughBalanceException {
+        this.withdraw(account1, amount);
+        this.deposit(account2, amount);
+        return true;
+    }
+
+    
+
+    abstract class Account {
+        private int id;
+        private double balance;
+
+        public Account(int id) {
+            this(id, 00d);
+        }
+        public Account(int id, double balance) {
+            this.id = id;
+            this.balance = balance;
+        }
+
+        public void deposit(double amount){
+            balance += amount;
+        }
+
+        public boolean withdraw(double amount) throws NotEnoughBalanceException {
+            if (getBalance() >= amount){
+                setBalance(getBalance() - amount);
+                return true;
+            }
+            throw new NotEnoughBalanceException("Cannot withdraw " + amount + " from this account.");
+        }
+
+        public double getBalance() {
+            return balance;
+        }
+
+        public void setBalance(double balance) {
+            this.balance = balance;
+        }
+    }
+
+    class CheckingAccount extends Account {
+
+        public CheckingAccount(int id) {
+            super(id, 00d);
+        }
+
+        public CheckingAccount(int id, double balance) {
+            super(id, balance);
+        }
+    }
+
+    class SavingAccount extends Account {
+        private double interestRate;
+
+        public SavingAccount(int id) {
+            super(id, 00d);
+        }
+
+        public SavingAccount(int id, double balance) {
+            super(id, balance);
+        }
+
+        public SavingAccount(int id, double balance, double interest) {
+            super(id, balance);
+            this.interestRate = interest;
+        }
+
+        //calculate interest, then return amount
+        double calculateInterest(){
+            return getBalance() * getInterestRate();
+        }
+
+        //apply interest and return new balance
+        double applyInterest(){
+            setBalance(getBalance() + calculateInterest());
+            return getBalance();
+        }
+
+        public double getInterestRate() {
+            return interestRate;
+        }
+
+        public void setInterestRate(double interestRate) {
+            this.interestRate = interestRate;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
 /*
 
 public class Bank {
